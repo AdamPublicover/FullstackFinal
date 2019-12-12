@@ -1,0 +1,72 @@
+<div>
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #sidenav mode="side">
+            <app-join-game-screen></app-join-game-screen>
+            <div>
+                <mat-nav-list>
+                    <mat-list-item>
+                        <a mat-flat-button color="accent" [routerLink]="['/xxx']" class="inlinebuttons">Join</a>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <a mat-flat-button color="accent" (click)="sidenav.toggle()" class="inlinebuttons">Cancel</a>
+                    </mat-list-item>
+                </mat-nav-list>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <mat-tab-group>
+                <mat-tab label="Player Rankings">
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">                
+                        <!-- Player Column -->
+                        <ng-container matColumnDef="player">
+                            <th mat-header-cell *matHeaderCellDef> Player </th>
+                            <td mat-cell *matCellDef="let element"> {{element.player}} </td>
+                        </ng-container>
+                        
+                        <!-- Rank Column -->
+                        <ng-container matColumnDef="rank">
+                            <th mat-header-cell *matHeaderCellDef> Rank </th>
+                            <td mat-cell *matCellDef="let element"> {{element.rank}} </td>
+                        </ng-container>
+                        
+                        <!-- Score Column -->
+                        <ng-container matColumnDef="score">
+                            <th mat-header-cell *matHeaderCellDef> Score </th>
+                            <td mat-cell *matCellDef="let element"> {{element.score}} </td>
+                        </ng-container>
+                        
+                        <!-- Time Column -->
+                        <ng-container matColumnDef="time">
+                            <th mat-header-cell *matHeaderCellDef> Time </th>
+                            <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                        </ng-container>
+        
+                        <!-- Games Played -->
+                        <ng-container matColumnDef="games_played">
+                            <th mat-header-cell *matHeaderCellDef> Games Played </th>
+                            <td mat-cell *matCellDef="let element"> {{element.games_played}} </td>
+                        </ng-container>
+        
+                        <!-- Status -->
+                        <ng-container matColumnDef="status">
+                            <th mat-header-cell *matHeaderCellDef> Status </th>
+                            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                        </ng-container>
+        
+                        <!-- Join Game Button Column -->
+                        <ng-container matColumnDef="join_game">
+                            <th mat-header-cell *matHeaderCellDef></th>
+                            <mat-cell *matCellDef="let row" >
+                                    <a mat-flat-button color="accent" (click)="sidenav.toggle()">Join Game</a>
+                            </mat-cell>
+                        </ng-container>
+                        
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>          
+                    </mat-tab>
+                <mat-tab label="Admin"> To see this data, please log in with the button above. </mat-tab>
+            </mat-tab-group>            
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

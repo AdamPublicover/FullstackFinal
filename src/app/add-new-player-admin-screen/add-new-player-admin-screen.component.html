@@ -1,0 +1,48 @@
+<div>
+    <div class="example-container">
+        <mat-form-field>
+            <input matInput placeholder="Player">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Rank">
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+            <mat-option value="4">4</mat-option>
+            <mat-option value="5">5</mat-option>
+            <mat-option value="6">6</mat-option>
+            <mat-option value="7">7</mat-option>
+            <mat-option value="8">8</mat-option>
+            <mat-option value="9">9</mat-option>
+            <mat-option value="10">10</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Score">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Time">
+        </mat-form-field>
+        <!-- replace below with available games -->
+        <mat-form-field>
+            <mat-select placeholder="Favourite Game">
+            <mat-option value="halo_reach">Halo Reach</mat-option>
+            <mat-option value="fallout_4">Fallout 4</mat-option>
+            <mat-option value="nier_automata">Nier Automata</mat-option>
+            <mat-option value="diablo_3">Diablo 3</mat-option>
+            <!-- sample -->
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Status">
+            <mat-option value="available">Available</mat-option>
+            <mat-option value="unavailable">Unavailable</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>              
+</div>
+<div>
+    <!-- add the player when add button clicked -->
+    <a mat-flat-button color="primary" [routerLink]="['/player-listing-admin-screen']">Add</a>
+    <a mat-flat-button color="primary" [routerLink]="['/player-listing-admin-screen']">Cancel</a>
+</div>

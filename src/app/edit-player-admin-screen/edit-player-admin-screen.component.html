@@ -1,0 +1,50 @@
+<div>
+    <div class="example-container">
+        <mat-form-field>
+            <!-- get player name from list -->
+            <input matInput placeholder="Player">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Select a rating">
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+            <mat-option value="4">4</mat-option>
+            <mat-option value="5">5</mat-option>
+            <mat-option value="6">6</mat-option>
+            <mat-option value="7">7</mat-option>
+            <mat-option value="8">8</mat-option>
+            <mat-option value="9">9</mat-option>
+            <mat-option value="10">10</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <!-- get player score from list -->
+            <input matInput placeholder="Score">
+        </mat-form-field>
+        <mat-form-field>
+            <!-- get player time from list -->
+            <input matInput placeholder="Time">
+        </mat-form-field>
+        <!-- replace below with available games -->
+        <mat-form-field>
+            <mat-select placeholder="Select a game">
+            <mat-option value="halo_reach">Halo Reach</mat-option>
+            <mat-option value="fallout_4">Fallout 4</mat-option>
+            <mat-option value="nier_automata">Nier Automata</mat-option>
+            <mat-option value="diablo_3">Diablo 3</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Select a status">
+            <mat-option value="available">Available</mat-option>
+            <mat-option value="unavailable">Unavailable</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>              
+</div>
+<div>
+    <!-- update the player when update button clicked -->
+    <a mat-flat-button color="primary" [routerLink]="['/player-listing-admin-screen']">Update</a>
+    <a mat-flat-button color="primary" [routerLink]="['/player-listing-admin-screen']">Cancel</a>
+</div>
