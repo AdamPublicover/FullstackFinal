@@ -1,3 +1,11 @@
+# COMP 3123 FINAL PROJECT
+# Students: 
+## Bethan Morris 101053879
+## Adam Publicover 101114254
+
+
+
+
 # Comp3123final
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
